@@ -16,7 +16,7 @@ class _EncryptTextState extends State<EncryptText> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text("Encrypt / Decrypt Text",style: TextStyle(fontWeight: FontWeight.bold),),
+        const Text("Encrypt / Decrypt Text",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
         const SizedBox(height: 10,),
         LayoutBuilder(
           builder: (context,constraints) {
@@ -36,6 +36,7 @@ class _EncryptTextState extends State<EncryptText> {
                           });
                         },
                         decoration: InputDecoration(
+                          hintText: "Text",
                           border: OutlineInputBorder(
 
                           )
@@ -73,6 +74,7 @@ class _EncryptTextState extends State<EncryptText> {
                           });
                         },
                         decoration: InputDecoration(
+                          hintText: "Cipher Text",
                             border: OutlineInputBorder(
 
                             )

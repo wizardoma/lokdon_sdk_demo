@@ -21,7 +21,8 @@ class _EncryptFileState extends State<EncryptFile> {
       children: [
         const Text(
           "Encrypt / Decrypt Files",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold,
+              fontSize: 20),
         ),
         const SizedBox(
           height: 10,
