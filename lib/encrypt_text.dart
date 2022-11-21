@@ -52,6 +52,7 @@ class _EncryptTextState extends State<EncryptText> {
 
                         var string = encryptString(text);
                         setState(() {
+
                           textResult = string;
                         });
                         }

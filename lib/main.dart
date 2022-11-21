@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lokdon_sdk_demo/encrypt_file.dart';
 import 'package:lokdon_sdk_demo/encrypt_text.dart';
 
 void main() {
@@ -43,7 +44,9 @@ class _MyAppState extends State<HomePage> {
           child: Column(
 
             children: [
-              EncryptText()
+              EncryptText(),
+              SizedBox(height: 50,),
+              EncryptFile()
             ],
           ),
         ),
