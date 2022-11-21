@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:lokdon_sdk/lokdon_sdk.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class EncryptFile extends StatefulWidget {
   const EncryptFile({Key? key}) : super(key: key);
@@ -82,8 +83,11 @@ class _EncryptFileState extends State<EncryptFile> {
                         height: 10,
                       ),
                       ElevatedButton(
-                          onPressed: () {
+                          onPressed: ()async {
                             if (rawFile != null) {
+                              if (!(await Permission.storage.isGranted)){
+                                await Permission.storage.request();
+                              }
                               // print(rawFile!.parent.path);
                               setState(() {
                                 encryptedFile = encryptFile(rawFile!, "alex",
