@@ -47,19 +47,6 @@ class _EncryptPasswordState extends State<EncryptPassword> {
                                 hintText: "Password", border: OutlineInputBorder()),
                           ),
                         ),
-                        Expanded(
-                          child: TextField(
-
-                            onChanged: (s) {
-                              setState(() {
-                                salt = int.parse(s);
-                              });
-                            },
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                                hintText: "Salt", border: OutlineInputBorder()),
-                          ),
-                        ),
                       ],
                     ),
                     SizedBox(

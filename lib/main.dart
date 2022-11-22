@@ -36,7 +36,7 @@ class _MyAppState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Lokdon SDK Demo",style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text("Lokdon SDK Demo",style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: false,
       ),
       body: SingleChildScrollView(
@@ -44,7 +44,7 @@ class _MyAppState extends State<HomePage> {
           padding: const EdgeInsets.all(16),
           child: Column(
 
-            children: [
+            children: const [
               EncryptText(),
               SizedBox(height: 50,),
               EncryptPassword(),
